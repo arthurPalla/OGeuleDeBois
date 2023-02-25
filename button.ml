@@ -7,7 +7,6 @@ type button = {
   sheet: int;
   action: Player.joueur list option -> int * Player.joueur list option ; 
   color: Raylib.Color.t
-
 }
 type text_box = {
   x: int;

@@ -1,7 +1,7 @@
 open Button
 open Player
 let w = 1500
-let h = 1200
+let h = 1000
 let sheet = ref 0
 
 let rec firs_sheet (button_list: button list) text_box player_list=  
@@ -52,8 +52,8 @@ let init () =
   Raylib.set_target_fps 40;
   let button = init_button 100 100 100 50  "Jouer" 0 (fun x-> ignore x; 1, x) Raylib.Color.white in 
   let button2 = init_button 100 100 100 50  "Retour" 1 (fun x-> ignore x; 0,x) Raylib.Color.white in
-  let button3 = init_button 400 800 200 70  "Validé" 1 (fun x->  1, Some (cycle_player_add (Option.get x))) Raylib.Color.green in
-  let button4 = init_button 800 800 200 70  "Eclaté" 1 (fun x->  1, Some (cycle_player_withdraw (Option.get x))) Raylib.Color.maroon in
+  let button3 = init_button 400 620 200 70  "Validé" 1 (fun x->  1, Some (cycle_player_add (Option.get x))) Raylib.Color.green in
+  let button4 = init_button 800 620 200 70  "Eclaté" 1 (fun x->  1, Some (cycle_player_withdraw (Option.get x))) Raylib.Color.maroon in
   let button5 = init_button 1000 100 200 50  "Score" 1 (fun x-> ignore x; 2, x) Raylib.Color.white  in 
   let button6 = init_button 100 100 100 50  "Retour" 2 (fun x-> ignore x; 1, x) Raylib.Color.white  in 
   [button6;button5;button4;button3; button2;button]
